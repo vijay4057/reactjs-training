@@ -17,8 +17,21 @@ function spreadLiteral(book: Book, authorLst: string[]): void {
     console.log(authorLst);
 
     //Destructuing array
-    const [bestAuthor] = authorLst;
+    const [goodAuthor] = authorLst;
+    console.log(goodAuthor);
+    //destructing and rest params
+    const [bestAuthor, ...others] = authorLst;
     console.log(bestAuthor);
+    console.log(others);
 
 }
-spreadLiteral(book, ['ty', 'ts']);
+spreadLiteral(book, authorLst);
+
+
+function spreadArray(a: string, b: string, c: string): void {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+spreadArray(...authorLst);

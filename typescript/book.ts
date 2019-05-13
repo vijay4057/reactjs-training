@@ -1,6 +1,6 @@
 export default class Book {
     private bookNumber: number;
-    public bookName: string;
+    public bookName: String;
     private author: string;
     public ratePerUnit: number;
 
@@ -22,4 +22,4 @@ export default class Book {
 let es6 = new Book(100, "B1", "A1", 100);
 console.log(es6.toString());
 
-export const authorLst = [];
+export const authorLst = ['a', 'b', 'c'];

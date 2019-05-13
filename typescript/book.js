@@ -14,4 +14,4 @@ class Book {
 exports.default = Book;
 let es6 = new Book(100, "B1", "A1", 100);
 console.log(es6.toString());
-exports.authorLst = [];
+exports.authorLst = ['a', 'b', 'c'];
