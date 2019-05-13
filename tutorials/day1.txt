@@ -32,3 +32,36 @@ d
 
 
 
+//ToRun
+
+node filename.js
+
+
+Spread
+	
+
+Destructuing
+	Default Parameter - It will assign default values to variable
+	function add(a = 2, b = 3) {
+		return a + b;
+	}
+	console.log(add('asd', 'ad'))
+	console.log(add())
+	console.log(add(undefined, undefined))
+	console.log(add(undefined, 6))
+	console.log(add(0, 0))
+	console.log(add(null, null))
+	console.log(add('', ''))
+Rest Parameter
+
+Typescript
+	To install typescript 
+		npm install -g typescript
+	To convert ts to es6 support
+		tsc --init
+		It will create a tsconfig.json to run the ts file using node
+	To Run ts file in cmd
+		Type CTRL+SHIFT+B in visual studio code
+		open ts watch - it will create js file so that you can run js using node
+		
+		

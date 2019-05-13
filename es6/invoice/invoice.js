@@ -14,7 +14,7 @@ class Invoice {
     }
 }
 module.exports = Invoice;
-var calculate = require('../calculate');
+var calculate = require('./calculate');
 console.log(calculate(10, 30));
 
 var invoice = new Invoice('123', 'Vijay', 100);
