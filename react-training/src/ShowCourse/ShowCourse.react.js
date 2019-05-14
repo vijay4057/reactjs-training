@@ -10,7 +10,10 @@ class ShowCourse extends React.Component {
             notNow: 0
         }
     }
-    increment = () => { this.setState({ interested: this.state.interested + 1 }) }
+    increment = (event) => {
+        console.log(event);
+        this.setState({ interested: this.state.interested + 1 })
+    }
 
     notNow = () => {
         //calling multiple time same setstate will not work due to async
