@@ -1,12 +1,13 @@
 import React from 'react';
 
+import logo from '../images/logoin.svg'
 
-
-const Header = () => {
+const Header = (props) => {
 
     return (
         <div >
-            <h1>Heading</h1>
+
+            <h1>{props.heading}</h1>
         </div>
     );
 

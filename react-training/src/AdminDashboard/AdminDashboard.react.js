@@ -11,10 +11,16 @@ class AdminDashboard extends React.Component {
 
     render() {
         return (
-            <div >
-                <Header></Header>
-                <Content></Content>
-                <Footer></Footer>
+            <div class="container">
+                <div className="row">
+                    <Header heading="Training"></Header>
+                </div>
+                <div className="row">
+                    <Content></Content>
+                </div>
+                <div className="row">
+                    <Footer new="" designer={"Vijay"} copyright={"2019-20"}></Footer>
+                </div>
             </div>
         );
     }

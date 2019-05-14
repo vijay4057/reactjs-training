@@ -2,11 +2,11 @@ import React from 'react';
 
 
 
-const Footer = () => {
+const Footer = (props) => {
 
     return (
         <div >
-            <h1>Footer</h1>
+            <h1>{props.copyright}@{props.designer} </h1>
         </div>
     );
 
