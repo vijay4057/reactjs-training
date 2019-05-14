@@ -2,3 +2,26 @@ ReactJs
 =========
 
 1 . To install npm install -g create-react-app
+
+
+
+To Create react app
+===================
+1. create-react-app myreacttraining
+
+2. json-server for mock json
+
+	json-server training.json --port 4000
+	
+3. (div>label+input)*5	- To create multiple html - Visual studio code emmet expansion
+	output is 
+	<div><label htmlFor=""></label><input type="text"/></div>
+	<div><label htmlFor=""></label><input type="text"/></div>
+	<div><label htmlFor=""></label><input type="text"/></div>
+	<div><label htmlFor=""></label><input type="text"/></div>
+	<div><label htmlFor=""></label><input type="text"/></div>
+	
+4. Use Fragment if you don't want to use div
+
+
+
