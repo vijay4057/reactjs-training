@@ -27,7 +27,10 @@ class AddToCalendar extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        fetch("http://localhost:4000/calendar", { method: "POST", body: JSON.stringify(this.state.newCalendar), headers: { 'Content-Type': 'application/json' } }).then();
+        fetch("http://localhost:4000/calendar",
+            { method: "POST", body: JSON.stringify(this.state.newCalendar), headers: { 'Content-Type': 'application/json' } })
+            .then(res => res.json())
+            .then(data => this.props.action(data));
     }
 
     // saveState = (state, name, value) => {

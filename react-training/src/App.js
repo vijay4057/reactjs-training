@@ -7,15 +7,19 @@ import profileimage from './images/profile.png'
 import ShowCourse from './ShowCourse/ShowCourse.react';
 import DataTable from './DataTable/DataTable.react';
 import TrainingDashboard from './TrainingDashboard/TrainingDashboard.react';
+import MyRoutes from './MyRoutes/MyRoutes.react';
 
 const user = { userName: 'Vijay', email: 'vijay@abc.com' };
 function App() {
   return (
     <div className="App">
+
+      <MyRoutes></MyRoutes>
+
       {/* <AdminDashboard></AdminDashboard>
       <Profile imageRef={profileimage} points={10} level={'Architect'} user={user}></Profile>
-      <ShowCourse /> */}
-      <TrainingDashboard></TrainingDashboard>
+      <ShowCourse /> 
+      <TrainingDashboard></TrainingDashboard>*/}
     </div>
   );
 }

@@ -1,13 +1,14 @@
 import React from 'react';
 
 import logo from '../images/logoin.svg'
+import NavBar from '../NavBar/NavBar.react';
 
 const Header = (props) => {
 
     return (
         <div >
 
-            <h1>{props.heading}</h1>
+            <NavBar></NavBar>
         </div>
     );
 

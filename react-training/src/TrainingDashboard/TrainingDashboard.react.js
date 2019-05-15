@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import DataTable from '../DataTable/DataTable.react';
 import AddToCalendar from '../AddToCalendar/AddToCalendar.react'
-
+import Header from '../Header/Header.react';
 
 
 class TrainingDashboard extends React.Component {
@@ -17,11 +17,18 @@ class TrainingDashboard extends React.Component {
             this.setState({ trainingList: data })
         });
     }
+    update = (data) => {
+        const newdata = [...this.state.trainingList, data];
+        this.setState({ trainingList: newdata })
+    }
 
     render() {
         return (
             <React.Fragment>
-                <AddToCalendar></AddToCalendar>
+                <div className="row">
+                    <Header heading="Training"></Header>
+                </div>
+                <AddToCalendar action={this.update}></AddToCalendar>
 
                 <div >
                     <DataTable data={this.state.trainingList}></DataTable>
