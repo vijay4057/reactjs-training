@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Greeter from './Greeter/Greeter.react'
-import Greeter1 from './Greeter/Greeter.react'
+
 import ShowTrainers from './ShowTrainers/ShowTrainers.react'
 
 function App() {

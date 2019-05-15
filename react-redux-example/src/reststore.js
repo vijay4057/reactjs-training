@@ -10,13 +10,7 @@ const initialState = {
 }
 
 
-export const fetchTrainer = (listFrmThunk, status) => {
-    return {
-        type: 'FET_TRAINERS',
-        list: listFrmThunk,
-        loaded: status
-    }
-}
+
 
 
 //Create a function called Thunk
