@@ -6,7 +6,7 @@ import NavBar from '../NavBar/NavBar.react';
 const Header = (props) => {
 
     return (
-        <div >
+        <div>
 
             <NavBar></NavBar>
         </div>

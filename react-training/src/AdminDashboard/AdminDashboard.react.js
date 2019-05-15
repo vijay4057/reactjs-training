@@ -12,9 +12,7 @@ class AdminDashboard extends React.Component {
     render() {
         return (
             <div className="container">
-                <div className="row">
-                    <Header heading="Training"></Header>
-                </div>
+               
                 <div className="row">
                     <Content></Content>
                 </div>

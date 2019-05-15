@@ -8,12 +8,15 @@ import ShowCourse from './ShowCourse/ShowCourse.react';
 import DataTable from './DataTable/DataTable.react';
 import TrainingDashboard from './TrainingDashboard/TrainingDashboard.react';
 import MyRoutes from './MyRoutes/MyRoutes.react';
+import Header from './Header/Header.react';
 
 const user = { userName: 'Vijay', email: 'vijay@abc.com' };
 function App() {
   return (
     <div className="App">
-
+      <div className="row">
+        <Header heading="Training"></Header>
+      </div>
       <MyRoutes></MyRoutes>
 
       {/* <AdminDashboard></AdminDashboard>

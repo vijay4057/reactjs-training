@@ -25,9 +25,7 @@ class TrainingDashboard extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="row">
-                    <Header heading="Training"></Header>
-                </div>
+
                 <AddToCalendar action={this.update}></AddToCalendar>
 
                 <div >
