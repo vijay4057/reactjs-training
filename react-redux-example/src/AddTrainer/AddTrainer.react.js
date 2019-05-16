@@ -1,6 +1,22 @@
 import React from 'react';
 import { reduxForm } from 'redux-form'
 import { Field } from 'redux-form';
+import validate from '../validate'
+const renderField = (props) => {
+    const { input, type, label, meta: { touched, error, warning } } = (props)
+    return (
+        < div >
+            <label>{label}</label>
+            <div>
+                <input {...input} placeholder={label} type={type} />
+
+                {touched && ((error &&
+                    <span className="text-danger">{error}</span>) ||
+                    (warning && <span>{warning}</span>))}
+            </div>
+        </div >
+    )
+}
 
 
 const AddTrainer = (props) => {
@@ -15,8 +31,9 @@ const AddTrainer = (props) => {
                     <Field component='input' name='id' type='text'></Field>
                 </div>
                 <div>
-                    <label htmlFor="">Trainer Name</label>
-                    <Field component='input' name='trainerName' type='text'></Field>
+                    {/* <label htmlFor="">Trainer Name</label>
+                    <Field component='input' name='trainerName' type='text'></Field> */}
+                    <Field name="trainerName" component={renderField} label="Trainer Name" />
                 </div>
                 <div>
                     <label htmlFor="">Skill Set</label>
@@ -36,4 +53,4 @@ const AddTrainer = (props) => {
 
 }
 
-export default reduxForm({ form: 'addTrainer' })(AddTrainer);
+export default reduxForm({ form: 'addTrainer', validate: validate })(AddTrainer);
