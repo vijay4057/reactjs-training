@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App">
       <h1>React Redux - Vijay</h1>
-      {/* <Greeter></Greeter>
-      <Greeter1></Greeter1> */}
+      <Greeter></Greeter>
+
       <ShowTrainers></ShowTrainers>
     </div>
   );

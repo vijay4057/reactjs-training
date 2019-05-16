@@ -37,9 +37,10 @@ const ShowTrainers = (props) => {
 
 }
 const mapStateToProps = (state) => {
+    console.log(state);
     return {
-        loaded: state.loaded,
-        datalist: state.listFrmThunk
+        loaded: state.trainer.loaded,
+        datalist: state.trainer.listFrmThunk
     }
 }
 const mapDispatchToProps = (dispatch) => {

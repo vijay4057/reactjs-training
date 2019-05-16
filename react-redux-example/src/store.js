@@ -1,5 +1,7 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, combineReducers } from 'redux'
+import trainers from './reststore'
 import { composeWithDevTools } from 'redux-devtools-extension'
+import thunk from 'redux-thunk'
 
 const initialState = { text: "Hello World" }
 
@@ -13,6 +15,7 @@ const reducer = (state = initialState, action) => {
             return state
     }
 }
-
-const store = createStore(reducer, composeWithDevTools());
+let obj = { reducer: reducer, trainer: trainers };
+const combine = combineReducers(obj)
+const store = createStore(combine, composeWithDevTools(applyMiddleware(thunk)));
 export default store;

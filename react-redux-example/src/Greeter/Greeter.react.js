@@ -14,8 +14,9 @@ const Greeter = (props) => {
 
 }
 const mapStateToProps = (state) => {
+    console.log(state);
     return {
-        textMessage: state.text
+        textMessage: state.reducer.text
     }
 }
 const mapDispatchToProps = (dispatch) => {
