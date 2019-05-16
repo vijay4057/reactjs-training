@@ -4,30 +4,31 @@ import { Field } from 'redux-form';
 
 
 const AddTrainer = (props) => {
+
     const { handleSubmit } = props
     return (
         <div >
             <form onSubmit={handleSubmit}>
+
                 <div>
-                    <label htmlFor="">ID</label>
+                    <label htmlFor="">Id</label>
                     <Field component='input' name='id' type='text'></Field>
                 </div>
                 <div>
-                    <label htmlFor="">Name</label>
-                    <Field component='input' name='name' type='text'></Field>
+                    <label htmlFor="">Trainer Name</label>
+                    <Field component='input' name='trainerName' type='text'></Field>
                 </div>
                 <div>
-                    <label htmlFor="">Skillset</label>
-                    <Field component='input' name='skillset' type='text'></Field>
+                    <label htmlFor="">Skill Set</label>
+                    <Field component='input' name='skilSet' type='text'></Field>
                 </div>
                 <div>
                     <label htmlFor="">Rating</label>
                     <Field component='input' name='rating' type='text'></Field>
                 </div>
                 <div>
-                    <input type="submit" />
+                    <button type='submit'>Submit</button>
                 </div>
-
 
             </form>
         </div>
@@ -35,4 +36,4 @@ const AddTrainer = (props) => {
 
 }
 
-export default reduxForm({ reduxForm: 'addTrainer' })(AddTrainer);
+export default reduxForm({ form: 'addTrainer' })(AddTrainer);
