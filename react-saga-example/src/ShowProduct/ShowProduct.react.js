@@ -22,10 +22,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         addItem: () => {
-            dispatch({ type: 'ADD_ITEM_ASYNC', value: 1 });
+            dispatch({ type: 'ADD_ITEM', value: 1 });
         },
         subItem: () => {
-            dispatch({ type: 'SUB_ITEM_ASYNC', value: 1 });
+            dispatch({ type: 'SUB_ITEM', value: 1 });
         }
     }
 }

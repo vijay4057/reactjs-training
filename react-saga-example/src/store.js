@@ -1,26 +1,33 @@
 import { createStore, applyMiddleware } from "redux";
 import sagaMiddleware from 'redux-saga';
-import { watchItem } from './sagas/saga'
+import rootSaga from './sagas/saga'
+import { createLogger } from 'redux-logger'
 
+const logger = createLogger();
 const initialState = {
     itemCount: 1
 }
 
 export const reducerName = (state = initialState, action) => {
-    const newState = { ...state }
+    let newState = { ...state }
     switch (action.type) {
         case 'ADD_ITEM_ASYNC':
-            return newState = newState.itemCount += action.value;
+            newState.itemCount += action.value;
+            return newState;
         case 'SUB_ITEM_ASYNC':
-            return newState = newState.itemCount -= action.value;
+            newState.itemCount -= action.value;
+            return newState;
+
         default:
-            return newState
+            return newState;
     }
 }
-const sagmiddle = sagaMiddleware;
+const sagmiddle = sagaMiddleware();
 
-const store = createStore(reducerName, applyMiddleware(sagaMiddleware));
 
-sagmiddle.run(watchItem);
+const store = createStore(reducerName, applyMiddleware(sagmiddle, logger));
+
+
+sagmiddle.run(rootSaga);
 
 export default store;
